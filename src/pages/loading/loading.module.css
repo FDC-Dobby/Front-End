@@ -1,0 +1,26 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.titlel {
+  font-size: 38px;
+  font-weight: 800;
+  color: #9D61FE;
+}
+
+.titler {
+  font-size: 38px;
+  font-weight: 800;
+  color: #5F00FB;
+}

@@ -1,0 +1,112 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  animation: fade 0.5s ease-in-out 0ms forwards 1;
+}
+
+.title {
+  font-size: 24px;
+  color: #9D61FE;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+  margin-bottom: 50px;
+}
+
+.now {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  border: solid 6px #9D61FE;
+  color: #9D61FE;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #9D61FE;
+  border: solid 6px #9D61FE;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: next 0.5s ease-in-out 0ms forwards 1;
+}
+
+.border {
+  z-index: -1;
+  margin-left: 10px;
+  width: 250px;
+  height: 6px;
+  background: #9D61FE;
+  position: absolute;
+}
+
+.el {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag {
+  width: 70px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.act {
+  animation: fade 0.5s ease-in-out 0ms forwards 1;
+}
+
+.btn {
+  margin-top: 50px;
+}
+
+.contain {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes next {
+  from {
+    background: white;
+  }
+
+  to {
+    background: #9D61FE;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
