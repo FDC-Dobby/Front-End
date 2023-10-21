@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from './signup.module.css'
+import classNames from 'classnames'
 import Button from '../../components/button/component'
 import SInput from '../../components/sinput/component'
 
@@ -18,35 +19,56 @@ export default function Signup() {
         <div className={n == 4 ? styles.now : styles.circle}>4</div>
       </div>
 
-      <div className={n > 1 ? styles.act : ''}>
+      <div>
         {n == 1 ?
           <div className={styles.contain}>
             <div className={styles.el}>
               <div className={styles.tag}>이름</div>
-              <SInput placeholder='' />
+              <SInput placeholder={''} type={'text'} />
             </div>
             <div className={styles.el}>
               <div className={styles.tag}>생년월일</div>
-              <SInput placeholder='' />
+              <SInput placeholder={''} type={'text'} />
             </div>
             <div className={styles.el}>
               <div className={styles.tag}>성별</div>
-              <SInput placeholder='' />
+              <SInput placeholder={''} type={'text'} />
             </div>
             <div className={styles.el}>
               <div className={styles.tag}>전화번호</div>
-              <SInput placeholder='' />
+              <SInput placeholder={''} type={'text'} />
             </div>
           </div>
-          : (
+          : (n == 2 ?
             <div className={styles.contain}>
               <div className={styles.el}>
                 <div className={styles.tag}>이메일</div>
-                <SInput placeholder='' />
+                <SInput placeholder={''} type={'text'} />
               </div>
               <div className={styles.el}>
                 <div className={styles.tag}>아이디</div>
-                <SInput placeholder='' />
+                <SInput placeholder={''} type={'text'} />
+              </div>
+            </div>
+            : <div className={styles.contain}>
+              <div className={styles.el}>
+                <div className={styles.tag}>비밀번호</div>
+                <SInput placeholder={''} type={'password'} />
+              </div>
+              <div className={styles.el}>
+                <div className={styles.tag}>비밀번호 확인</div>
+                <SInput placeholder={''} type={'password'} />
+              </div>
+
+              <div className={styles.el}>
+                <div className={styles.check}>
+                  <input type="checkbox" />
+                  <div>이즈프리의 이용약관에 동의합니다. (필수)</div>
+                </div>
+                <div className={styles.check}>
+                  <input type="checkbox" />
+                  <div>이즈프리의 알람에 동의합니다. (선택)</div>
+                </div>
               </div>
             </div>
           )}

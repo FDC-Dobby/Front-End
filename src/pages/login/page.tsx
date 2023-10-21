@@ -11,8 +11,8 @@ export default function Login() {
 
       <div className={styles.form}>
         <img src={logo} alt="" className={styles.logo} />
-        <Input placeholder={'아이디'} />
-        <Input placeholder={'비밀번호'} />
+        <Input placeholder={'아이디'} type={'text'} />
+        <Input placeholder={'비밀번호'} type={'text'} />
         <Button>로그인</Button>
         <Link to={'/signup'} className={styles.signup}>회원가입</Link>
       </div>
