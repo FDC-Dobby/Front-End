@@ -83,6 +83,19 @@
   align-items: center;
 }
 
+input[type=checkbox] {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: #F5F5F5;
+}
+
+.empty {
+  margin-top: 50px;
+}
+
 .btn {
   margin-top: 50px;
 }

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import styles from './signup.module.css'
-import classNames from 'classnames'
 import Button from '../../components/button/component'
 import SInput from '../../components/sinput/component'
+import classNames from 'classnames'
 
 export default function Signup() {
   const [n, setN] = useState<number>(1)
@@ -60,15 +60,13 @@ export default function Signup() {
                 <SInput placeholder={''} type={'password'} />
               </div>
 
-              <div className={styles.el}>
-                <div className={styles.check}>
-                  <input type="checkbox" />
-                  <div>이즈프리의 이용약관에 동의합니다. (필수)</div>
-                </div>
-                <div className={styles.check}>
-                  <input type="checkbox" />
-                  <div>이즈프리의 알람에 동의합니다. (선택)</div>
-                </div>
+              <div className={classNames([styles.check, styles.empty])}>
+                <input type="checkbox" />
+                <div>이즈프리의 이용약관에 동의합니다. (필수)</div>
+              </div>
+              <div className={styles.check}>
+                <input type="checkbox" />
+                <div>이즈프리의 알람에 동의합니다. (선택)</div>
               </div>
             </div>
           )}
