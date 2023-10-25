@@ -153,6 +153,17 @@
   justify-content: center;
 }
 
+.sinput {
+  width: 180px;
+  height: 50px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background: #F5F5F5;
+  margin: 4px;
+  padding-left: 20px;
+}
+
 @keyframes next {
   from {
     background: white;
