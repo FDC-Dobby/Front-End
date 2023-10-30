@@ -1,0 +1,30 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  width: 350px;
+  margin-bottom: 150px;
+}
+
+.taxi {
+  margin-bottom: 80px;
+}
+
+.btn {
+  margin: 8px;
+  width: 300px;
+  height: 55px;
+  border-radius: 20px;
+  background: #9D61FE;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}

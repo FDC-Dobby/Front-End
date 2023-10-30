@@ -1,0 +1,111 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  margin: 40px 40px 20px 40px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  width: 350px;
+}
+
+.reverse {
+  transform: rotate(180deg);
+}
+
+.info {
+  width: 300px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.get {
+  margin-top: 50px;
+  width: 300px;
+  height: 55px;
+  border-radius: 20px;
+  background: #9D61FE;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ok {
+  margin-top:20px;
+  width: 300px;
+  height: 55px;
+  border-radius: 20px;
+  background: #9D61FE;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.warn {
+  width: 350px;
+  color: #FF4D4D;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.field {
+  width: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+}
+
+input {
+  outline: none;
+}
+
+.subdevice {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  background: #F5F5F5;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.input {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  background: #F5F5F5;
+}
+
+.status {
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 800;
+  width: 298px;
+  height: 42px;
+  background: #C4A1FE;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -13,6 +13,7 @@ import Block from '../../assets/imgs/block.png'
 import Notice from '../../assets/imgs/notice.png'
 import Send from '../../assets/imgs/send.png'
 import New from '../../assets/imgs/new.png'
+import Glass from '../../assets/glass.svg'
 
 export default function KakaoMap(props: any) {
   const [map, setMap] = useState(null as any)
@@ -137,7 +138,7 @@ export default function KakaoMap(props: any) {
             </div>
           </div>
 
-          <p className={'w-[270px] text-[#9D61FE]'}>Review</p>
+          <p className={'w-[250px] text-[#9D61FE] font-bold mb-2'}>Review</p>
           <div className={'flex items-center justify-center mb-[100px]'}>
             <input type="text" className={'w-68 h-12 mr-2 rounded-full drop-shadow-xl p-4 outline-none'} placeholder='정확한 정보를 작성해주세요.' />
             <button className={'w-10 h-10 rounded-full drop-shadow-xl bg-[#9D61FE] flex items-center justify-center cursor-pointer'} onClick={() => console.log('click')}>
@@ -184,7 +185,7 @@ export default function KakaoMap(props: any) {
             </div>
           </div>
 
-          <p className={'w-[250px] text-[#9D61FE] font-bold'}>Review</p>
+          <p className={'w-[250px] text-[#9D61FE] font-bold mb-2'}>Review</p>
           <div className={'flex items-center justify-center mb-[100px]'}>
             <input type="text" className={'w-68 h-12 mr-2 rounded-full drop-shadow-xl p-4 outline-none'} placeholder='정확한 정보를 작성해주세요.' />
             <button className={'w-10 h-10 rounded-full drop-shadow-xl bg-[#9D61FE] flex items-center justify-center cursor-pointer'} onClick={() => console.log('click')}>
@@ -241,6 +242,12 @@ export default function KakaoMap(props: any) {
         : <div className={`unanimated rounded-t-[20px] overflow-y-auto fixed z-50 flex justify-center items-start shadow-2xl bg-white md:w-[400px] lg:w-[400px] w-screen lg:h-screen md:h-screen h-[50%] mt-[120%] lg:mt-0 md:mt-0`}>
           <p>Create new one!</p>
         </div>}
+
+      <div className={'fixed z-50 w-screen h-24 flex justify-center items-center'}>
+        <div className={'w-[347px] h-[47px] flex items-center rounded-[20px] bg-gray-200/50 backdrop-blur-xl'}>
+          <img src={Glass} alt="" className={'w-[24px] h-[24px] ml-4'} />
+        </div>
+      </div>
 
       <div id="map" className='w-screen h-screen'></div>
     </Fragment>

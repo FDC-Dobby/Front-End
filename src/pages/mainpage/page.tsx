@@ -15,16 +15,16 @@ export default function MainPage() {
           <img src={Location} alt="" className={styles.icon} />
           <div className={styles.text}>편의시설 지도</div>
         </Link>
-        <div className={styles.btn2}>
+        <Link className={styles.btn2} to={'/lent'}>
           <img src={Chair} alt="" className={styles.icon} />
           <div className={styles.text}>의료기기 대여</div>
-        </div>
+        </Link>
       </div>
       <div className={styles.contain}>
-        <div className={styles.btn2}>
+        <Link className={styles.btn2} to={'/taxi'}>
           <img src={Taxi} alt="" className={styles.icon} />
           <div className={styles.text}>콜택시 호출 및 예약</div>
-        </div>
+        </Link>
         <div className={styles.btn1}>
           <img src={Pie} alt="" className={styles.icon} />
           <div className={styles.text}>내 설정</div>
