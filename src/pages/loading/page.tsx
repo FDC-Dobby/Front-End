@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import styles from './loading.module.css'
 import logo from '../../assets/logo.svg'
 
-export default function MainPage() {
+export default function Loading () {
   const navigate = useNavigate()
 
   useEffect(() => {

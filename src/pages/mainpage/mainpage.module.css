@@ -1,0 +1,53 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contain {
+  display: flex;
+  justify-content: center;
+}
+
+.btn1 {
+    background: #9D61FE;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin: 10px;
+}
+.btn2 {
+    background:#C4A1FE ;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin: 10px;
+}
+
+.icon {
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo {
+    height: 131px;
+    margin-bottom: 30px;
+}
