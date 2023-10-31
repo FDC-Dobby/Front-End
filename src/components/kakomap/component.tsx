@@ -1,5 +1,4 @@
 import { Fragment, useEffect, useState } from 'react'
-import axios from 'axios'
 // const API_KEY = 'AIzaSyD5jd1PhKwr78AVXuvNkIufDcdMa3HfPCg'
 
 import Smile from '../../assets/imgs/smile.png'
@@ -19,7 +18,7 @@ export default function KakaoMap(props: any) {
   const [map, setMap] = useState(null as any)
   const [selected, setSelected] = useState(false)
   const [created, setCreated] = useState(false)
-  const [markerInfo, setMarkerInfo] = useState('')
+  // const [markerInfo, setMarkerInfo] = useState('')
   const [selectedMarker, setSelectedMarker] = useState<any>({})
   const [newM, setNewM] = useState({ latitude: 0, longitude: 0 })
 
@@ -28,6 +27,7 @@ export default function KakaoMap(props: any) {
     const options = { center: new kakao.maps.LatLng(props.coords.latitude, props.coords.longitude), level: 4, disableDoubleClickZoom: true }
     const kakaoMap = new kakao.maps.Map(container, options)
     setMap(kakaoMap)
+    console.log(map, newM)
 
     let places: any[] = [
       {
