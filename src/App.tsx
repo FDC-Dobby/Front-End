@@ -6,6 +6,7 @@ import MainPage from './pages/mainpage/page'
 import Map from './pages/map/page'
 import Lent from './pages/lent/page'
 import Taxi from './pages/taxi/page'
+import Profile from './pages/profile/page'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Route path='/map' element={<Map />} />
       <Route path='/lent' element={<Lent />} />
       <Route path='/taxi' element={<Taxi />} />
+      <Route path='/profile' element={<Profile />} />
     </Routes>
   )
 }

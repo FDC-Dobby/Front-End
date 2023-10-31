@@ -25,10 +25,10 @@ export default function MainPage() {
           <img src={Taxi} alt="" className={styles.icon} />
           <div className={styles.text}>콜택시 호출 및 예약</div>
         </Link>
-        <div className={styles.btn1}>
+        <Link className={styles.btn1} to={'/profile'}>
           <img src={Pie} alt="" className={styles.icon} />
           <div className={styles.text}>내 설정</div>
-        </div>
+        </Link>
       </div>
     </div>
   )
