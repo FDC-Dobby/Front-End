@@ -2,9 +2,28 @@ import styles from './lent.module.css'
 import LentCar from '../../assets/lentcar.png'
 import Arrow from '../../assets/arrow.svg'
 import { Fragment, useState } from 'react'
+import axios from 'axios'
 
 export default function Lent() {
   const [step, setStep] = useState<number>(0)
+  const [devices, setDevices] = useState({
+    chair: [],
+    ramp: [],
+  })
+
+  const getDevices = () => {
+    axios.get('http://localhost:3000/api/devices', {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `JWT ${sessionStorage.getItem('TOKEN')}`
+      }
+    }).then(resp => {
+      setDevices({
+        chair: resp.data.chair,
+        ramp: resp.data.ramp
+      })
+    })
+  }
 
   return (
     <div className={styles.main}>
@@ -27,29 +46,27 @@ export default function Lent() {
             <div className={styles.subtitle}>보조기기</div>
             <select name="" className={styles.subdevice}>
               <option value="chair">휠체어</option>
-              <option value="case1">1번종류</option>
-              <option value="case2">2번종류</option>
-              <option value="case3">3번종류</option>
             </select>
           </div>
           <div className={styles.field}>
             <div className={'text-[#FF4D4D] text-[20px] mr-1'}>*</div>
             <div className={styles.subtitle}>대여지역</div>
             <select name="" className={styles.subdevice}>
-              <option value="chair">경북소프트웨어고등학교</option>
-              <option value="case1">1번종류</option>
-              <option value="case2">2번종류</option>
-              <option value="case3">3번종류</option>
+              <option value="chair">서울특별시</option>
+              <option value="case1">경상북도</option>
+              <option value="case2">경상남도</option>
+              <option value="case3">부산광역시</option>
+              <option value="case4">대구광역시</option>
+              <option value="case5">세종특별자치시</option>
             </select>
           </div>
           <div className={styles.field}>
             <div className={'text-[#FF4D4D] text-[20px] mr-1'}>*</div>
             <div className={styles.subtitle}>대여지사</div>
             <select name="" className={styles.subdevice}>
-              <option value="chair">의성군</option>
-              <option value="case1">1번종류</option>
-              <option value="case2">2번종류</option>
-              <option value="case3">3번종류</option>
+              <option value="chair">의성 보조기기</option>
+              <option value="case1">경주 보조기기</option>
+              <option value="case2">서울 보조기기</option>
             </select>
           </div>
           <div className={styles.field}>

@@ -1,14 +1,30 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState } from "react"
 import styles from './taxi.module.css'
 import Calltaxi from '../../assets/calltaxi.png'
 import Marker from '../../assets/Marker.png'
 import Logo from '../../assets/logo.svg'
+import axios from "axios"
 
 export default function Taxi() {
   const [step, setStep] = useState(0)
   const [isCalled, setIsCalled] = useState(false)
+  const [arriveTimes, setArriveTimes] = useState({
+    one: 0,
+    two: 0
+  })
 
-  const getCall = () => {
+  const getCall = async () => {
+    axios.get('http://localhost:3000/api/taxi/call', {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `JWT ${sessionStorage.getItem('TOKEN')}` 
+      }
+    }).then(resp => {
+      setArriveTimes({ 
+        one: resp.data.one,
+        two: resp.data.two
+      })
+    })
     setIsCalled(true)
   }
 
